@@ -1,0 +1,81 @@
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header{
+    padding-top: 20px;
+    @include flex-start;
+    @include pad{
+        @include flex-column;
+    } 
+}
+.logo a{
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/M1.png);
+    @include hidetext;
+    @include pad{
+        width: 150px;
+        height: 150px;
+        background-image: url(../images/M2.png);
+        margin-bottom: 20px;
+    }
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        @include pad{
+            width: 50%;
+            margin: 0 auto 10px auto;
+        }
+    }
+    a{
+        font-weight: bold;
+        padding: 10px;
+        display: block;
+        color: #fff;
+        text-align: center;
+        background: #3399FF;
+        &:hover{
+            background: orange;
+        }
+    }
+}
+.content{
+    @include flex;
+    @include pad{
+        @include flex-column;
+    }
+}
+.news_body{
+    width: 75%;
+    padding: 10px;
+    @include pad{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @include border;
+    h1{
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+.aside{
+    width: 20%;
+    @include border;
+    padding: 5px;
+    @include pad{
+        width: 100%;
+        @include flex-column;
+    }
+    img{
+        margin-bottom: 10px;
+    }
+}
+.footer{
+    text-align: center;
+    padding: 8px 0;
+}
